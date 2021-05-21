@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'constants.dart';
+import 'contacts.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -123,7 +124,14 @@ class _LoginScreenState extends State<LoginScreen> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () => print('Login Button Pressed'),
+        // onPressed: () => print('Login Button Pressed'),
+        onPressed: () =>
+        {
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ContactPage())
+          ),
+        },
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
